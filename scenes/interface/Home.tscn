@@ -1,0 +1,106 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvycp3r1h0tu6"]
+
+[ext_resource type="Theme" uid="uid://b3fbdtbhny330" path="res://theme/custom_theme.tres" id="1_srgon"]
+[ext_resource type="Script" uid="uid://xmyjbmgf5o0a" path="res://scenes/interface/button.gd" id="2_owoix"]
+[ext_resource type="ButtonGroup" uid="uid://cuwg8bb4ihe8b" path="res://button_groups/new_button_group.tres" id="3_x8rxu"]
+[ext_resource type="FontFile" uid="uid://dr5kd0rk7elo7" path="res://fonts/Oxanium-Medium.ttf" id="4_hom28"]
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1166.0
+offset_bottom = 650.0
+theme = ExtResource("1_srgon")
+
+[node name="username" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 420.0
+offset_top = 280.0
+offset_right = 720.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_srgon")
+placeholder_text = "Identifiant"
+
+[node name="password" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 420.0
+offset_top = 350.0
+offset_right = 720.0
+offset_bottom = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_srgon")
+placeholder_text = "Mot de passe"
+secret = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 473.0
+offset_right = 620.0
+offset_bottom = 510.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_srgon")
+text = "Se connecter"
+script = ExtResource("2_owoix")
+
+[node name="CheckBox" type="CheckBox" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 451.0
+offset_top = 280.0
+offset_right = 517.0
+offset_bottom = 314.0
+theme = ExtResource("1_srgon")
+button_pressed = true
+button_group = ExtResource("3_x8rxu")
+text = "Oui"
+
+[node name="CheckBox2" type="CheckBox" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 452.0
+offset_top = 316.0
+offset_right = 532.0
+offset_bottom = 362.0
+theme = ExtResource("1_srgon")
+button_group = ExtResource("3_x8rxu")
+text = "Oui"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 380.0
+offset_top = 118.0
+offset_right = 768.0
+offset_bottom = 191.0
+grow_horizontal = 2
+theme = ExtResource("1_srgon")
+theme_override_fonts/font = ExtResource("4_hom28")
+theme_override_font_sizes/font_size = 72
+text = "City Project"
+horizontal_alignment = 1
+vertical_alignment = 1
